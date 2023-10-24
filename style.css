@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+header{
+    background: transparent;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 1.2em 0;
+    z-index: 100;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:.5em
+}
+.Logo{
+    font-weight: 400;
+    color:white;
+    font-size: 2.5rem;
+}
+.Logo-span{
+    color:red;
+    font-weight: 700;
+}
+ul li{
+    display: inline-block;
+}
+ul li+li{
+    margin-left: 1em;
+}
+.nav-link{
+    font-size: .9rem;
+    font-weight: 700;
+    color:white;
+    position: relative;
+    display: inline-block;
+    opacity: .8;
+}
+.nav-link::before{
+    content: " ";
+    position: absolute;
+    width:0%;
+    height:3px;
+    left:0;
+    bottom:-1.5em;
+    background-color: black;
+    transition: width 0.3s;
+}
+.nav-link:hover{
+    color:red;
+    opacity: 1;
+}
+.nav-link:hover::before{
+    width:100%;
+}
+.hero-section{
+    background-image: url("img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    min-height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 4em;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:80%;
+    height:100%;
+    background-image: linear-gradient(to right,rgba(0,0,0,1), rgba(255,0,0,0));
+    z-index: 1;
+}
+.hero-wrapper{
+    z-index: 2;
+}
+.name,.desc,.job,.hero-btn-div{
+    z-index: 3;
+    position: relative;
+}
+.name{
+    font-size: 3rem;
+    color: lightskyblue;
+}
+.job{
+    font-size: 1.5rem;
+    color:white;
+}
+.desc{
+    width:60%;
+    color:white;
+    line-height: 1.5;
+    margin-top: 1em;
+}
+.hero-btn-div{
+    margin-top: 2em;
+}
+.hero-btn{
+    padding: .5em 2em;
+}
+.hire-me-btn{
+    background-color: black;
+    color:white;
+}
+.contact-btn{
+    color:black;
+    background-color: white;
+    display: inline-block;
+    margin-left: 1em;
+}
